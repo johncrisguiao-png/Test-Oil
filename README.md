@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Oil ($OIL) | Solana Meme Coin</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron', sans-serif;
+}
+
+body{
+    background:linear-gradient(to bottom,#1a0f05,#3b230b,#000);
+    color:#f5d27a;
+    scroll-behavior:smooth;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    background:rgba(0,0,0,0.8);
+    z-index:1000;
+}
+
+nav a{
+    color:#f5d27a;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+.hero{
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1950&q=80") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+    position:relative;
+    z-index:1;
+}
+
+.hero h1{
+    font-size:4rem;
+    text-shadow:0 0 20px #000;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:1.2rem;
+    color:#fff3c4;
+}
+
+.btn{
+    padding:15px 30px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#c89b3c,#000);
+    border:2px solid #f5d27a;
+    color:#f5d27a;
+    font-weight:bold;
+    cursor:pointer;
+    margin:10px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#f5d27a;
+    color:#000;
+}
+
+section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+h2{
+    font-size:2.5rem;
+    margin-bottom:40px;
+}
+
+.card{
+    background:rgba(0,0,0,0.7);
+    padding:30px;
+    border-radius:15px;
+    margin:20px auto;
+    max-width:600px;
+    border:1px solid #c89b3c;
+}
+
+.contract{
+    margin-top:20px;
+    padding:15px;
+    background:rgba(255,255,255,0.1);
+    border-radius:10px;
+    display:inline-block;
+}
+
+footer{
+    padding:30px;
+    text-align:center;
+    opacity:0.6;
+    background:#000;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div><strong>$OIL</strong></div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#buy">Buy</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>TEST OIL 🛢️</h1>
+        <p>Drilling liquidity. Pumping profits. Built on Solana.</p>
+        <button class="btn" onclick="document.getElementById('buy').scrollIntoView()">Start Drilling</button>
+
+        <div class="contract">
+            Solana Contract:
+            <span id="contract">PASTE_YOUR_SOLANA_TOKEN_ADDRESS_HERE</span>
+            <button class="btn" style="padding:5px 15px;" onclick="copyContract()">Copy</button>
+        </div>
+    </div>
+</div>
+
+<section id="about">
+    <h2>About Test Oil</h2>
+    <div class="card">
+        In the middle of the digital desert, we struck gold.<br><br>
+        Test Oil is a Solana-based meme coin for those who believe in one thing — drill until it pumps.
+        No fluff. Just fuel.
+    </div>
+</section>
+
+<section id="tokenomics">
+    <h2>Tokenomics</h2>
+    <div class="card">
+        🛢️ Total Supply: 1,000,000,000 $OIL<br><br>
+        🔥 60% Liquidity<br>
+        🏜️ 30% Community<br>
+        📢 10% Marketing<br><br>
+        0% Tax — Pure Crude.
+    </div>
+</section>
+
+<section id="roadmap">
+    <h2>Roadmap</h2>
+    <div class="card">
+        Phase 1: Strike Oil (Launch)<br><br>
+        Phase 2: Desert Expansion (Community Growth)<br><br>
+        Phase 3: Black Gold Boom (Listings)<br><br>
+        Phase 4: Global Refinery (Moon Mission 🚀)
+    </div>
+</section>
+
+<section id="buy">
+    <h2>How to Buy</h2>
+    <div class="card">
+        1. Install Phantom Wallet<br><br>
+        2. Fund with SOL<br><br>
+        3. Swap on Jupiter or Raydium<br><br>
+        4. Hold $OIL and ride the pump 🛢️
+    </div>
+</section>
+
+<footer>
+    © 2026 Test Oil. Built on Solana. Drill responsibly.
+</footer>
+
+<script>
+function copyContract(){
+    const text = document.getElementById("contract").innerText;
+    navigator.clipboard.writeText(text);
+    alert("Contract copied!");
+}
+</script>
+
+</body>
+</html>
