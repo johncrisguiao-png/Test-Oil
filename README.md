@@ -20,14 +20,23 @@ body{
     scroll-behavior:smooth;
 }
 
+/* Navigation */
 nav{
     position:fixed;
     width:100%;
-    padding:20px;
+    padding:20px 0;
+    display:flex;
+    justify-content:center;
+    background:rgba(0,0,0,0.85);
+    z-index:1000;
+}
+
+nav .nav-container{
+    width:100%;
+    max-width:1100px;
     display:flex;
     justify-content:space-between;
-    background:rgba(0,0,0,0.8);
-    z-index:1000;
+    padding:0 20px;
 }
 
 nav a{
@@ -37,6 +46,7 @@ nav a{
     font-weight:bold;
 }
 
+/* Hero Section */
 .hero{
     height:100vh;
     background:url("https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1950&q=80") center/cover no-repeat;
@@ -45,6 +55,7 @@ nav a{
     align-items:center;
     text-align:center;
     position:relative;
+    padding:0 20px;
 }
 
 .hero::after{
@@ -58,19 +69,21 @@ nav a{
 .hero-content{
     position:relative;
     z-index:1;
+    max-width:800px;
 }
 
 .hero h1{
     font-size:4rem;
-    text-shadow:0 0 20px #000;
+    margin-bottom:20px;
 }
 
 .hero p{
-    margin:20px 0;
     font-size:1.2rem;
     color:#fff3c4;
+    margin-bottom:30px;
 }
 
+/* Buttons */
 .btn{
     padding:15px 30px;
     border-radius:30px;
@@ -88,8 +101,16 @@ nav a{
     color:#000;
 }
 
+/* Sections */
 section{
-    padding:100px 20px;
+    padding:120px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.section-container{
+    width:100%;
+    max-width:800px;
     text-align:center;
 }
 
@@ -100,26 +121,27 @@ h2{
 
 .card{
     background:rgba(0,0,0,0.7);
-    padding:30px;
+    padding:40px;
     border-radius:15px;
-    margin:20px auto;
-    max-width:600px;
     border:1px solid #c89b3c;
 }
 
+/* Contract Box */
 .contract{
-    margin-top:20px;
+    margin-top:30px;
     padding:15px;
     background:rgba(255,255,255,0.1);
     border-radius:10px;
     display:inline-block;
+    word-break:break-all;
 }
 
+/* Footer */
 footer{
-    padding:30px;
+    padding:40px 20px;
     text-align:center;
-    opacity:0.6;
     background:#000;
+    opacity:0.6;
 }
 </style>
 </head>
@@ -127,12 +149,14 @@ footer{
 <body>
 
 <nav>
-    <div><strong>$OIL</strong></div>
-    <div>
-        <a href="#about">About</a>
-        <a href="#tokenomics">Tokenomics</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#buy">Buy</a>
+    <div class="nav-container">
+        <div><strong>$OIL</strong></div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#tokenomics">Tokenomics</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#buy">Buy</a>
+        </div>
     </div>
 </nav>
 
@@ -145,48 +169,57 @@ footer{
         <div class="contract">
             Solana Contract:
             <span id="contract">PASTE_YOUR_SOLANA_TOKEN_ADDRESS_HERE</span>
-            <button class="btn" style="padding:5px 15px;" onclick="copyContract()">Copy</button>
+            <br><br>
+            <button class="btn" style="padding:8px 20px;" onclick="copyContract()">Copy</button>
         </div>
     </div>
 </div>
 
 <section id="about">
-    <h2>About Test Oil</h2>
-    <div class="card">
-        In the middle of the digital desert, we struck gold.<br><br>
-        Test Oil is a Solana-based meme coin for those who believe in one thing — drill until it pumps.
-        No fluff. Just fuel.
+    <div class="section-container">
+        <h2>About Test Oil</h2>
+        <div class="card">
+            In the middle of the digital desert, we struck gold.<br><br>
+            Test Oil is a Solana-based meme coin for those who believe in one thing — drill until it pumps.
+            No fluff. Just fuel.
+        </div>
     </div>
 </section>
 
 <section id="tokenomics">
-    <h2>Tokenomics</h2>
-    <div class="card">
-        🛢️ Total Supply: 1,000,000,000 $OIL<br><br>
-        🔥 60% Liquidity<br>
-        🏜️ 30% Community<br>
-        📢 10% Marketing<br><br>
-        0% Tax — Pure Crude.
+    <div class="section-container">
+        <h2>Tokenomics</h2>
+        <div class="card">
+            🛢️ Total Supply: 1,000,000,000 $OIL<br><br>
+            🔥 60% Liquidity<br>
+            🏜️ 30% Community<br>
+            📢 10% Marketing<br><br>
+            0% Tax — Pure Crude.
+        </div>
     </div>
 </section>
 
 <section id="roadmap">
-    <h2>Roadmap</h2>
-    <div class="card">
-        Phase 1: Strike Oil (Launch)<br><br>
-        Phase 2: Desert Expansion (Community Growth)<br><br>
-        Phase 3: Black Gold Boom (Listings)<br><br>
-        Phase 4: Global Refinery (Moon Mission 🚀)
+    <div class="section-container">
+        <h2>Roadmap</h2>
+        <div class="card">
+            Phase 1: Strike Oil (Launch)<br><br>
+            Phase 2: Desert Expansion (Community Growth)<br><br>
+            Phase 3: Black Gold Boom (Listings)<br><br>
+            Phase 4: Global Refinery (Moon Mission 🚀)
+        </div>
     </div>
 </section>
 
 <section id="buy">
-    <h2>How to Buy</h2>
-    <div class="card">
-        1. Install Phantom Wallet<br><br>
-        2. Fund with SOL<br><br>
-        3. Swap on Jupiter or Raydium<br><br>
-        4. Hold $OIL and ride the pump 🛢️
+    <div class="section-container">
+        <h2>How to Buy</h2>
+        <div class="card">
+            1. Install Phantom Wallet<br><br>
+            2. Fund with SOL<br><br>
+            3. Swap on Jupiter or Raydium<br><br>
+            4. Hold $OIL and ride the pump 🛢️
+        </div>
     </div>
 </section>
 
